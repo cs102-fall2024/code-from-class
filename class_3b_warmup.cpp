@@ -11,6 +11,6 @@ int main() {
                                 {6,7,8}};
 
     cout << my_array[0][4] << endl;
-    cout << my_array[2][4] << endl;
+    //cout << my_array[2][4] << endl;
 
 }
