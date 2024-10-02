@@ -21,9 +21,22 @@ int main() {
     cout << "Gimme a size! ";
     cin >> size;
 
-    for (int index = 0; index < size; index++) {
+    int* times = new int[size];
 
+    for (int index = 0; index < size; index++) {
+       // times[index] = index;
+       //times[index] = 7;
+       cin >> times[index];
+       cout << "you entered: " << times[index] << endl;
     }
+    cout << endl;
+
+    for (int i = 0; i < size; i ++){
+        cout << times[i] << " ";
+    }
+    cout << endl;
+
+    delete[] times;
 
     return 0;
 }
