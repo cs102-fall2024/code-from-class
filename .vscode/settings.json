@@ -44,6 +44,30 @@
         "ostream": "cpp",
         "stdexcept": "cpp",
         "streambuf": "cpp",
-        "typeinfo": "cpp"
-    }
+        "typeinfo": "cpp",
+        "charconv": "cpp",
+        "chrono": "cpp",
+        "ctime": "cpp",
+        "ratio": "cpp",
+        "format": "cpp",
+        "iomanip": "cpp",
+        "semaphore": "cpp",
+        "span": "cpp",
+        "sstream": "cpp",
+        "stop_token": "cpp",
+        "thread": "cpp",
+        "variant": "cpp",
+        "cassert": "cpp"
+    },
+
+    "editor.quickSuggestions": {
+    "other": false,
+    "comments": false,
+    "strings": false
+    },
+    "editor.hover.enabled": false,
+    "editor.parameterHints.enabled": false,
+    "editor.acceptSuggestionOnCommitCharacter": true,
+    "C_Cpp.autocomplete": "disabled",
+    "C_Cpp.configurationWarnings": "disabled"
 }
