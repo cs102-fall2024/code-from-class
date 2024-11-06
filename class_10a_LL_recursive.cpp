@@ -71,7 +71,7 @@ SingularLL::SingularLL() {
     _tail = nullptr;
 }
 
-SingularLL::~SingularLL() {
+/*SingularLL::~SingularLL() {
     cout << "Destructor called" << endl;
     Node* current = _head;
     Node* next_node = nullptr;
@@ -80,15 +80,20 @@ SingularLL::~SingularLL() {
         delete current;
         current = next_node;
     }
+}*/
+
+SingularLL::~SingularLL() {
+    clear(_head);
 }
 
 /**
- * @brief Why does this work?
+ * @brief Fixed the clear function with the help of Madeline 
  * 
  * @param current_node 
  */
 void SingularLL::clear(Node* current_node){
-    if(current_node != nullptr){
+    //Previous code stopped at the nullptr when we wanted to stop BEFORE the nullptr
+    if(current_node->get_next() != nullptr) {
         clear(current_node->get_next());
         delete current_node;
     }
@@ -190,26 +195,26 @@ int SingularLL::size_helper(Node* current_node) {
 int main() {
     SingularLL test_list;
 
-    cout << "Initial list (should be empty):" << endl;
-    test_list.display();
+    //cout << "Initial list (should be empty):" << endl;
+    //test_list.display();
 
-    cout << "Inserting values 1, 2, 3 at the head of the list:" << endl;
+    //cout << "Inserting values 1, 2, 3 at the head of the list:" << endl;
     test_list.insert_at_head(1);
     test_list.insert_at_head(2);
     test_list.insert_at_head(3);
-    test_list.display();
+    //test_list.display();
 
-    cout << "Inserting values 4, 5 at the tail of the list (using insert_at_tail_bad):" << endl;
+    //cout << "Inserting values 4, 5 at the tail of the list (using insert_at_tail_bad):" << endl;
     test_list.insert_at_tail_bad(4);
     test_list.insert_at_tail_bad(5);
-    test_list.display();
+    //test_list.display();
 
-    cout << "Inserting values 6, 7 at the tail of the list (using insert_at_tail):" << endl;
+    //cout << "Inserting values 6, 7 at the tail of the list (using insert_at_tail):" << endl;
     test_list.insert_at_tail(6);
     test_list.insert_at_tail(7);
     test_list.display();
 
-    cout << "Deleting node with value 3:" << endl;
+    /*cout << "Deleting node with value 3:" << endl;
     test_list.delete_by_value(3);
     test_list.display();
 
@@ -230,9 +235,9 @@ int main() {
     test_list.delete_by_value(1);
     test_list.delete_by_value(6);
 
-    cout << "Final list (should be empty):" << endl;
+    cout << "Final list (should be empty):" << endl;*/
     test_list.display();
-    cout<< "Size of list is: "<< test_list.size() <<endl;
+    //cout<< "Size of list is: "<< test_list.size() <<endl;
 
     return 0;
 }
