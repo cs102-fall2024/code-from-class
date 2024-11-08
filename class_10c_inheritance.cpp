@@ -18,7 +18,7 @@ class Animal {
 
         //This is also a read only method because we are not changing anything, we are simply printing
         virtual void make_sound() const {
-            cout << "amebic peep" << endl;
+            cout << "amoebic peep" << endl;
         }
 };
 
