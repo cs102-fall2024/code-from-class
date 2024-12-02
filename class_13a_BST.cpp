@@ -107,11 +107,10 @@ void BinarySearchTree::in_order_to_vector_recursive(vector<int>& numbers, Binary
 
         //put our node into the vector
         numbers[index] = current->_data;
-        
+        index++;
 
         //visit right
         in_order_to_vector_recursive(numbers, current->_right,index);
-        index++;
     }
 }
 
